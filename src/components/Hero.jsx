@@ -46,14 +46,14 @@ export default function Hero() {
           </a>
           
           <div className="flex gap-3">
-            <a href="#" className="p-3.5 bg-white/70 border border-white/80 rounded-full text-[#701a75] hover:text-[#4c1d95] hover:bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
-              <FileText size={20} />
+            <a href="mailto:dhitee018@gmail.com" className="p-3.5 bg-white/70 border border-white/80 rounded-full text-[#701a75] hover:text-[#4c1d95] hover:bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+              <Mail size={20} />
             </a>
             <a href="https://github.com/dtnotdt" target="_blank" rel="noreferrer" className="p-3.5 bg-white/70 border border-white/80 rounded-full text-[#701a75] hover:text-[#4c1d95] hover:bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
-              <Github size={20} />
+              <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com/in/dhiteeshah" target="_blank" rel="noreferrer" className="p-3.5 bg-white/70 border border-white/80 rounded-full text-[#701a75] hover:text-[#4c1d95] hover:bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
-              <Linkedin size={20} />
+            <a href="https://www.linkedin.com/in/dhitee-shah-936a64351/" target="_blank" rel="noreferrer" className="p-3.5 bg-white/70 border border-white/80 rounded-full text-[#701a75] hover:text-[#4c1d95] hover:bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+              <Linkedin className="w-5 h-5" />
             </a>
           </div>
         </motion.div>

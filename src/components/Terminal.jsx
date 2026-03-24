@@ -16,7 +16,7 @@ export default function Terminal({ setActiveTab }) {
     projects: 'Grade Calculator - Error-free CGPA evaluation app natively built for University students.',
     experience: 'Media & Promotion Head @ ACM Student Chapter, driving digital engagement and events.',
     achievements: 'Oracle Cloud Foundations | Deloitte Externship | Smart India Hackathon.',
-    contact: 'dhitee018@gmail.com | Connect to ping me.',
+    contact: 'Email: dhitee018@gmail.com | Phone: 9023109307 | Link: inkedin.com/in/dhitee-shah-936a64351',
     current_focus: 'Prompt Engineering, scalable systems, and designing aesthetic interactions.',
     resume: 'Try typing "download resume" or click the file icon in the OS window.',
   };
