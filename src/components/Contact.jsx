@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, ArrowUpRight, Terminal as Codeforces, CheckSquare2 } from 'lucide-react';
+import { Mail, ArrowUpRight, Terminal as Codeforces, CheckSquare2, Sparkles } from 'lucide-react';
 import { GithubIcon as Github, LinkedinIcon as Linkedin } from './Icons';
 
 export default function Contact() {
@@ -86,9 +86,14 @@ export default function Contact() {
           </a>
         </motion.div>
 
-        <motion.p variants={itemVariants} className="text-xs font-mono text-[#701a75]/40 mt-12">
-          © 2026 Dhitee Shah. Built with React & Tailwind CSS.
-        </motion.p>
+        <motion.div variants={itemVariants} className="mt-12 text-center flex flex-col items-center gap-2">
+          <div className="flex items-center justify-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#4c1d95]/50 bg-white/50 px-4 py-2 rounded-xl border border-white/60 shadow-sm backdrop-blur-sm">
+             <Sparkles size={12} className="text-pink-400" /> Frontend Craftsmanship
+          </div>
+          <p className="text-[11px] font-mono text-[#701a75]/70 max-w-md mt-2 leading-relaxed">
+            Designed & built with absolute attention to visual storytelling, motion, and interaction design. Custom engineered for responsive perfection using React, Tailwind v4, and Framer Motion.
+          </p>
+        </motion.div>
       </motion.div>
     </div>
   );

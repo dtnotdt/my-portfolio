@@ -17,6 +17,7 @@ import CustomCursor from './components/CustomCursor';
 export default function App() {
   const [booted, setBooted] = useState(false);
   const [activeTab, setActiveTab] = useState('intro');
+  const [currentTheme, setCurrentTheme] = useState('Baby Pink Dream');
 
   const tabs = [
     { id: 'intro', label: 'Intro', icon: <User size={16} />, content: <Hero /> },
@@ -26,20 +27,26 @@ export default function App() {
     { id: 'projects', label: 'Projects', icon: <Code2 size={16} />, content: <Project /> },
     { id: 'signals', label: 'Signals', icon: <Briefcase size={16} />, content: <Signals /> },
     { id: 'lab', label: 'Lab', icon: <FlaskConical size={16} />, content: <Lab /> },
+    { id: 'terminal', label: 'Terminal', icon: <SquareTerminal size={16} />, content: <Terminal setActiveTab={setActiveTab} /> },
     { id: 'contact', label: 'Contact', icon: <MessageCircleHeart size={16} />, content: <Contact /> },
-    { id: 'terminal', label: 'Terminal', icon: <SquareTerminal size={16} />, content: <Terminal setActiveTab={setActiveTab} /> }
   ];
 
   return (
-    <div className="bg-[#fdf2f8] text-[#4c1d95] font-sans h-[100svh] w-screen overflow-hidden relative selection:bg-pink-300">
+    <div className={`text-[#4c1d95] font-sans h-[100svh] w-screen overflow-hidden relative selection:bg-pink-300 transition-colors duration-1000`}>
       <CustomCursor />
-      <AnimatedBackground />
+      <AnimatedBackground theme={currentTheme} />
       
       {!booted ? (
         <BootScreen onComplete={() => setBooted(true)} />
       ) : (
-        <main className="relative z-10 w-full h-[100svh] flex items-center justify-center p-2 md:p-8 lg:p-12">
-          <OSWindow tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+        <main className="relative z-10 w-full h-[100svh] flex items-center justify-center sm:p-4 md:p-8 lg:p-12 pb-24 md:pb-8">
+          <OSWindow 
+            tabs={tabs} 
+            activeTab={activeTab} 
+            setActiveTab={setActiveTab} 
+            currentTheme={currentTheme}
+            setCurrentTheme={setCurrentTheme}
+          />
         </main>
       )}
     </div>
